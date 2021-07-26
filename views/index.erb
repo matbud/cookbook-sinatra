@@ -1,0 +1,16 @@
+<h1>Welcome to the Cookbook!</h1>
+
+<h3>List of recipes:</h3>
+<ul>
+  <% @cookbook.all.each do |recipe| %>
+    <li>
+      <%= recipe.name %><br>
+      <span>Rating <%= recipe.rating%>/5<br></span>
+      <span>Preparation time: <%= recipe.prep_time%><br></span>
+      <p><%= recipe.description%></p>
+      <hr>
+    </li>
+  <% end %>
+</ul>
+
+<a href='/new'>Add a recipe</a>
